@@ -47,7 +47,7 @@ export class ImageGallery extends Component  {
 
         return;
       }
-        console.log('Hello')
+        
       if(prevState.page !== page && page !== 1)  {
         PixabayAPI
         .fetchPhotos(searchQuery, page)
@@ -79,8 +79,8 @@ export class ImageGallery extends Component  {
   render() {
     const { images, status, error, isLoader } = this.state;
     const { searchQuery } = this.props
-    console.log("🚀 ~ GALLERY IMAGES", images)
-    console.log(this.state)
+    // console.log("🚀 ~ GALLERY IMAGES", images)
+    // console.log(this.state)
     
     if(status === 'idle') {return null};
 
